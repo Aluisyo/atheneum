@@ -6,4 +6,4 @@ The Open, Decentralized and Permanent Library
 
 
 
-Application is constantly available on the link: [https://arweave.net/](https://arweave.net/)
+Application is constantly available on the link: [https://arweave.net/WRnZM4o0h4vLsfbE6OM3EJUQ4d8b5y4ORKMytRLVGt8](https://arweave.net/WRnZM4o0h4vLsfbE6OM3EJUQ4d8b5y4ORKMytRLVGt8)
