@@ -26,7 +26,7 @@ const BoxItem = props => {
       <p style={{padding:10}}>{txData.text}</p>
       {(txData.file.includes("data:application")) &&
       <div style={{marginLeft:'auto', marginRight:'auto'}} class="bx--text-area__wrapper">
-        <embed align="center" src={txData.file} id="text-area-3" style={{maxWidth:350, maxHeight:300}} alt="Loaded" />
+        <embed align="center" src={txData.file} id="text-area-3" style={{Width:350, Height:500}} alt="Loaded" />
       </div>
       } 
       <a href={txData.file} download> Download </a>	  
@@ -51,18 +51,15 @@ class App extends React.Component{
   state = {
     loading:false,
     loadWallet:false,
-    //Wallet Data
     walletAddress:'',
     walletBalance:'',
     walletData:false,
-    //Post Data
     textPost:'',
     filePost:'',
     txModalOpen:false,
     transaction:'',
     fee:'',
     loadingTx:false,
-    //Permafeed
     publicPosts:[],
     userPost:[],
     tab:0
@@ -115,7 +112,7 @@ class App extends React.Component{
         this.setState({loading:false, filePost:pdf, fileLoaded:true})
       }else{
         this.setState({loading:false, fileLoaded:false, filePost:''})
-        alert('Please, upload only pdf files')
+        alert('Please upload only pdf files')
       }
     }catch(err){
       console.log(err)
@@ -127,7 +124,7 @@ class App extends React.Component{
   newPost = async() => {
     try{
       if(!this.state.loadWallet){
-        alert('Load your Arweave Wallet')
+        alert('Load your Arweave Wallet to Log in')
         return
       }
       this.setState({loading:true})
@@ -247,7 +244,7 @@ class App extends React.Component{
           <div style={{marginLeft:'auto', marginRight:'auto'}} class="bx--form-item">
             <label for="text-area-3" class="bx--label">Loaded Book</label>
             <div class="bx--text-area__wrapper">
-              <embed src={this.state.filePost} id="text-area-3" style={{maxWidth:350, maxHeight:300}} alt="Loaded" />
+              <embed src={this.state.filePost} id="text-area-3" style={{maxWidth:350, maxHeight:500}} alt="Loaded" />
             </div>
           </div>
           }
@@ -292,7 +289,7 @@ class App extends React.Component{
               <div style={{marginLeft:'auto', marginRight:'auto'}} class="bx--form-item">
                 <label for="pdf-confirm" class="bx--label">Loaded Book</label>
                 <div class="bx--text-area__wrapper">
-                  <embed src={this.state.filePost} id="pdf-confirm" style={{maxWidth:350, maxHeight:300}} alt="Loaded" />
+                  <embed src={this.state.filePost} id="pdf-confirm" style={{maxWidth:350, maxHeight:350}} alt="Loaded" />
                 </div>
               </div>
             }

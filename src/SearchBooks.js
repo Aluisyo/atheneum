@@ -10,8 +10,9 @@ const BoxItem = props => {
         <div style={{marginLeft:'auto', marginRight:'auto'}} class="bx--text-area__wrapper">
           <embed align="center" src={txData.file} id="text-area-3" style={{maxWidth:350, maxHeight:300}} alt="Loaded" />
         </div>
-        }     
-        <p align="center" style={{padding:5, fontSize:10}}>By:{from}</p> 
+        }   
+		<a href={txData.file} download> Download </a>		
+        <p align="center" style={{padding:5, fontSize:10}}>Uploaded By:{from}</p> 
       </div>
     )
   }
